@@ -7,3 +7,5 @@ jobs:
  scan:
    name: Scan
    uses: warcraft2/actions/.github/workflows/reusable-trivy.yml@reusable-trivy.yml
+    with:
+      image: 'ghcr.io/warcraft2/wordsmith-web:latest'
