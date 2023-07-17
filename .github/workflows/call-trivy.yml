@@ -1,0 +1,11 @@
+name: Call Trivy
+on:
+ push:
+   branches: [main]
+ pull_request:
+jobs:
+ scan:
+   name: Scan
+   uses: warcraft2/actions/.github/workflows/reusable-trivy.yml@reusable-trivy.yml
+    with:
+      image: 'ghcr.io/warcraft2/wordsmith-web:latest'
